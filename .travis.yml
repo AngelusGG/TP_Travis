@@ -2,5 +2,18 @@ language: node_js
 node_js:
   - '12'
 
-script:
-  - echo 'Salut'
+cache:
+  directories:
+  - node_modules
+
+install:
+  - npm install
+
+deploy:
+  provider: heroku
+  apikey:
+    secure: NCDrZHOAhTFP1cUGtSpUnXWT4Wu3uTuBQWwqyHSqnDG0imQlJ+U4SvIfnkzCKqXScps9dpi7oYpkKoVjeHs0pTQJSCjXGAtjenvVDn7P5NF0vxm8nt+JuFxGW+h6SP0RjW9/2vb2e2ARErTS9e97yZROz+tzjTGEf1Df5A16j6PQiv2ynFK79QvROyA1DvDTeEXzOGX/Oaf5/YuiiIx6+IFTG8YHAlU3mY8xSMWLEI3wcA5X9d0cbV5QScWOPpoUWZ+nrX40ouUs4XQudq5hzh+pe/c4rUoLDrMODR/828xV5Q+dff74zk9vRl7Q3oFYlYvZfK7SKbcB0Gi0xt6rWicnfKtaJSn9UL73YIFRwXK0RDu09PsoCyO26tL6s+rash8LIMUO+mm2Nmp85YkLeykNY9WYg6VEXlZfoEKKkHtVSKd28fA7p/l+/enL+Ss9Da4/z7sgcmphoUnxs8DFaWxS50B2Rm5mOS1IW9bckUgz64+ZruBrUAFAm8OlD940jmKv/6oDKArNfz/q5LjzIR6wvYf/rCx11eMqC05jqUkkpp7xyr3zCTLDytUPaDnidkhogfenY+ZExu+ac155c5OcgINsTIjcfzitt4GM7o601NoqjJlmyyTBWtkhA3xZdvteUBxhenr7y6M8n0PnLFOc2fJcT1V9YoQDc8wYeMw=
+  app: tptravis
+  on:
+    repo: AngelusGG/TP_Travis
+    branch: dev
